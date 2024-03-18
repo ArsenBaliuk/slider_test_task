@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "Nokora";
+    src: url("../fonts/Nokora-Regular.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "NokoraBold";
+    src: url("../fonts/Nokora-Bold.woff") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+}
+
+/*.slider {*/
+/*    width: 100%;*/
+/*    overflow: hidden;*/
+/*}*/
+/*.slider-wrapper {*/
+/*    display: flex;*/
+/*    width: max-content;*/
+/*}*/
+
+.home_page .slider-container {
+    position: relative;
+}
+.home_page .swiper {
+    position: static;
+}
+.single-slide {
+    width: fit-content;
+    max-width: 338px;
+    height: 370px;
+    position: relative;
+    cursor: pointer;
+}
+.single-slide .title {
+    position: absolute;
+    z-index: 2;
+    width: fit-content;
+    max-width: 90%;
+    height: fit-content;
+    inset: 0;
+    margin: auto;
+
+    color: #FFFFFF;
+    font-family: "NokoraBold";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.single-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    height: fit-content;
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+.swiper-arrow-button {
+    width: 7.5px;
+}
+
+html .opacity-bg.show-bg {
+    position: fixed;
+    visibility: unset;
+    opacity: .3;
+}
+.popup-slider {
+    position: absolute;
+    display: none;
+    z-index: 9;
+    inset: 0;
+    margin: auto;
+    width: 881px;
+    max-width: 90%;
+    height: fit-content;
+    background: #F8F8F8;
+}
+.popup-slider.active-popup {
+    display: block;
+    z-index: 16;
+}
+
+.close-popup-btn {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 21.5px;
+    top: 21.5px;
+    cursor: pointer;
+}
+
+.popup-slider .popup-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 48px;
+}
+.popup-slider .title {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #8A8A8A;
+}
+.popup-slider .title * {
+    font-family: "NokoraBold";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.popup-slider .card-description {
+    padding-top: 17px;
+}
+.popup-slider .card-description,
+.popup-slider .card-description * {
+    font-family: "Nokora";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet:nth-child(1-4) {
+    transform: scale(1);
+}
+
+
+@media screen and (width < 768px) {
+    .single-slide {
+        width: 240px;
+        height: 300px;
+    }
+    .home_page .container {
+        padding-inline: 0;
+    }
+    .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+        width: 100% !important;
+    }
+    .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+        margin-inline: 0px!important;
+        padding-inline: 7px!important;
+        width: 30px!important;
+        height: 30px!important;
+    }
+}
